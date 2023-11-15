@@ -4929,11 +4929,91 @@ lcd_4bit_t lcd_1 = {
     .lcd_data[3].logic = GPIO_LOW,
 };
 
+sint8 ret_val_from_kpad = -1;
+
+uint32 temp_number = 0;
+uint32 answer_numebr = 0;
+uint8 last_char = '0';
+
+uint32 final_answer[11];
 
 int main() {
     Std_ReturnType ret = (Std_ReturnType)0x00;
     application_intialize();
+    ret = lcd_4bit_send_command(&lcd_1, 0x0E);
+
     while(1){
+        ret = keypad_get_value(&keypad1 , &ret_val_from_kpad);
+        _delay((unsigned long)((150)*(4000000UL/4000.0)));
+        if(ret_val_from_kpad == '#'){
+            ret = lcd_4bit_send_command(&lcd_1, 0x01);
+            ret = lcd_4bit_send_command(&lcd_1, 0x02);
+            ret_val_from_kpad = -1;
+            temp_number = 0;
+            answer_numebr = 0;
+            last_char = '0';
+            ret = lcd_4bit_send_string_position(&lcd_1 , 1 , 6 , "Calculator");
+            _delay((unsigned long)((1000)*(4000000UL/4000.0)));
+            ret = lcd_4bit_send_command(&lcd_1, 0x01);
+        }
+        if(ret_val_from_kpad != -1){
+            ret = lcd_4bit_send_char_data(&lcd_1 , ret_val_from_kpad);
+
+            if(ret_val_from_kpad>='0' && ret_val_from_kpad<='9'){
+                temp_number*=10;
+                temp_number+=(ret_val_from_kpad-'0');
+            }
+            else{
+
+                if(last_char == '0'){
+                    answer_numebr=temp_number;
+                    if(ret_val_from_kpad == '+'){
+                        last_char='+';
+                    }
+                    else if(ret_val_from_kpad == '-'){
+                        last_char='-';
+                    }
+                    else if(ret_val_from_kpad == '*'){
+                        last_char='*';
+                    }
+                    else if(ret_val_from_kpad == '/'){
+                        last_char='/';
+                    }
+                }
+
+                else if(last_char == '+'){
+                    answer_numebr+=temp_number;
+                    last_char = ret_val_from_kpad;
+                }
+                else if(last_char == '-'){
+                    answer_numebr-=temp_number;
+                    last_char = ret_val_from_kpad;
+                }
+                else if(last_char == '*'){
+                    answer_numebr*=temp_number;
+                    last_char = ret_val_from_kpad;
+                }
+                else if(last_char == '/'){
+                    answer_numebr/=temp_number;
+                    last_char = ret_val_from_kpad;
+                }
+
+
+
+                if(ret_val_from_kpad == '='){
+                    ret = lcd_4bit_send_command(&lcd_1, 0x01);
+                    ret = lcd_4bit_send_command(&lcd_1, 0x02);
+                    ret = convert_int_to_string(answer_numebr, final_answer);
+                    ret = lcd_4bit_send_string(&lcd_1 , final_answer);
+                }
+
+                temp_number = 0;
+            }
+
+            ret_val_from_kpad = -1;
+        }
+
+
 
     }
 
