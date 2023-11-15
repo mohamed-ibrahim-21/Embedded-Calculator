@@ -3,6 +3,32 @@
 [d edition pro ]
 [d chip 18F4620 ]
 [d frameptr 4065 ]
+"11 D:\Important files\courses\(Embedded) ahmed abd el gafar\00 project\01Calculator\Embedded-Calculator\Calculator project.X\application.c
+[e E2999 . `uc
+PORTA_INDEX 0
+PORTB_INDEX 1
+PORTC_INDEX 2
+PORTD_INDEX 3
+PORTE_INDEX 4
+]
+[e E2989 . `uc
+GPIO_PIN0 0
+GPIO_PIN1 1
+GPIO_PIN2 2
+GPIO_PIN3 3
+GPIO_PIN4 4
+GPIO_PIN5 5
+GPIO_PIN6 6
+GPIO_PIN7 7
+]
+[e E2985 . `uc
+GPIO_DIRECTION_OUTPUT 0
+GPIO_DIRECTION_INPUT 1
+]
+[e E2981 . `uc
+GPIO_LOW 0
+GPIO_HIGH 1
+]
 "40 D:\Important files\courses\(Embedded) ahmed abd el gafar\00 project\01Calculator\Embedded-Calculator\Calculator project.X\MCAL_Layer/GPIO/hel_gpio.c
 [e E2985 . `uc
 GPIO_DIRECTION_OUTPUT 0
@@ -31,9 +57,9 @@ GPIO_HIGH 1
 GPIO_LOW 0
 GPIO_HIGH 1
 ]
-"11 D:\Important files\courses\(Embedded) ahmed abd el gafar\00 project\01Calculator\Embedded-Calculator\Calculator project.X\application.c
+"81 D:\Important files\courses\(Embedded) ahmed abd el gafar\00 project\01Calculator\Embedded-Calculator\Calculator project.X\application.c
 [v _main main `(i  1 e 2 0 ]
-"22
+"92
 [v _application_intialize application_intialize `(v  1 e 1 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
@@ -131,13 +157,13 @@ GPIO_HIGH 1
 [v _lat_registers lat_registers `[5]*.39VEuc  1 e 10 0 ]
 "16
 [v _port_registers port_registers `[5]*.39VEuc  1 e 10 0 ]
-"11 D:\Important files\courses\(Embedded) ahmed abd el gafar\00 project\01Calculator\Embedded-Calculator\Calculator project.X\application.c
+"81 D:\Important files\courses\(Embedded) ahmed abd el gafar\00 project\01Calculator\Embedded-Calculator\Calculator project.X\application.c
 [v _main main `(i  1 e 2 0 ]
 {
-"19
+"89
 } 0
-"22
+"92
 [v _application_intialize application_intialize `(v  1 e 1 0 ]
 {
-"25
+"95
 } 0

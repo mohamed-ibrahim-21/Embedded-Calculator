@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\mibra\AppData\Local\Temp\xcAs6bk.\driver_tmp_3.o
+ C:\Users\mibra\AppData\Local\Temp\xcAsq8s.\driver_tmp_3.o
  -Odist/default/debug\Calculator_project.X.debug.hex
  -logfile=dist/default/debug\Calculator_project.X.debug.hxl
  -addressing=1
@@ -9,19 +9,19 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(C:\Users\mibra\AppData\Local\Temp\xcAs6bk.\driver_tmp_3.o)
-  1000h - 1014h		(C:\Users\mibra\AppData\Local\Temp\xcAs6bk.\driver_tmp_3.o)
-  1016h - 106Bh		(C:\Users\mibra\AppData\Local\Temp\xcAs6bk.\driver_tmp_3.o)
-  300000h - 30000Dh		(C:\Users\mibra\AppData\Local\Temp\xcAs6bk.\driver_tmp_3.o)
+  0h - 3h		(C:\Users\mibra\AppData\Local\Temp\xcAsq8s.\driver_tmp_3.o)
+  1000h - 1014h		(C:\Users\mibra\AppData\Local\Temp\xcAsq8s.\driver_tmp_3.o)
+  1016h - 1079h		(C:\Users\mibra\AppData\Local\Temp\xcAsq8s.\driver_tmp_3.o)
+  300000h - 30000Dh		(C:\Users\mibra\AppData\Local\Temp\xcAsq8s.\driver_tmp_3.o)
  Unused ranges:
   4h - FFFh
   1015h - 1015h
-  106Ch - 2FFFFFh
+  107Ah - 2FFFFFh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\mibra\AppData\Local\Temp\xcAs6bk.\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\mibra\AppData\Local\Temp\xcAsq8s.\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -33,7 +33,8 @@
 00001030 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001040 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001050 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00001060 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- --
+00001060 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001070 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- --
 ----------------------------------------------------------
 00300000 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
 00300010 | --
