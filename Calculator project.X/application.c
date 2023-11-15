@@ -1,10 +1,9 @@
 /* 
  * File:   application.c
- * Author: mohamed ibrahim
+ * Author: mohamed ibrahim, omnia yehia
  *
  * Created on October 4, 2023, 10:15 PM
  */
-
 
 #include "application.h"
 
