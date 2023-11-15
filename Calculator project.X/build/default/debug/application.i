@@ -4943,5 +4943,6 @@ int main() {
 
 void application_intialize(void){
     Std_ReturnType ret = (Std_ReturnType)0x00;
-
+    ret = lcd_4bit_initialize(&lcd_1);
+    ret = keypad_initialize(&keypad1);
 }

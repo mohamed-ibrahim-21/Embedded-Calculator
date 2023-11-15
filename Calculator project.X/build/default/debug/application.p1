@@ -24,6 +24,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "21 ./application.h
 [; ;./application.h: 21: void application_intialize(void);
 [v _application_intialize `(v ~T0 @X0 0 ef ]
+"51 ./ECU_Layer/LCD/ecu_lcd.h
+[; ;./ECU_Layer/LCD/ecu_lcd.h: 51: Std_ReturnType lcd_4bit_initialize (const lcd_4bit_t *_lcd_);
+[v _lcd_4bit_initialize `(uc ~T0 @X0 0 ef1`*CS275 ]
+"27 ./ECU_Layer/Keypad/ecu_keypad.h
+[; ;./ECU_Layer/Keypad/ecu_keypad.h: 27: Std_ReturnType keypad_initialize (const keypad_t *_keypad_obj);
+[v _keypad_initialize `(uc ~T0 @X0 0 ef1`*CS274 ]
 "54 C:/Users/mibra/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4620.h
 [; <" PORTA equ 0F80h ;# ">
 "191
@@ -452,7 +458,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;application.c: 93:     Std_ReturnType ret = (Std_ReturnType)0x00;
 [v _ret `uc ~T0 @X0 1 a ]
 [e = _ret -> -> 0 `i `uc ]
+"94
+[; ;application.c: 94:     ret = lcd_4bit_initialize(&lcd_1);
+[e = _ret ( _lcd_4bit_initialize (1 -> &U _lcd_1 `*CS275 ]
 "95
-[; ;application.c: 95: }
+[; ;application.c: 95:     ret = keypad_initialize(&keypad1);
+[e = _ret ( _keypad_initialize (1 -> &U _keypad1 `*CS274 ]
+"96
+[; ;application.c: 96: }
 [e :UE 281 ]
 }

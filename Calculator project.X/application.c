@@ -82,7 +82,7 @@ int main() {
     Std_ReturnType ret = E_NOT_OK;
     application_intialize();
     while(1){
-             
+        
     }
     
     return (EXIT_SUCCESS);
